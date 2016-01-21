@@ -1,0 +1,6 @@
+.book .book-body .page-wrapper .page-inner section.normal blockquote {
+    color: #AAA;
+    background: none;
+    border-left: 5px solid #F1F1F1;
+    padding-left: 8px;
+}
