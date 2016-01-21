@@ -84,4 +84,4 @@ Now have a look to the left for a table of contents, and below for related topic
 - `2015-10-19 14:38` - Updated use of "Asset" to "Instance"
 - `2015-11-19 09:07` - Updated to pure-dict
 - `2015-12-20 21:56` - Updated image of [Context + Instance](http://forums.pyblish.com/t/learning-pyblish-by-example/108/6).
-- `2016-01-21 17:46` - Transitioned to GitBooks
+- `2016-01-21 17:46` - Transitioned to GitBooks, removed section about custom test and services.
