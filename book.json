@@ -6,4 +6,10 @@
         "mobi": "styles/website.css",
         "epub": "styles/website.css"
     }
+    "plugins": [ "versions" ],
+    "pluginsConfig": {
+        "versions": {
+            "type": "branches"
+        }
+    }
 }
