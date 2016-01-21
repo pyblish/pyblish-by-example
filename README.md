@@ -15,7 +15,7 @@
 - Developer and Artist communication through the UI
 
 
-[Pyblish](http://pyblish.com)
+[Pyblish]: http://pyblish.com
 
 <br>
 <br>
