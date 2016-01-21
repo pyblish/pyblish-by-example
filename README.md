@@ -42,10 +42,6 @@ If you haven't already, go ahead and install Pyblish for [Windows][w], [Linux][l
 
 Now have a look to the left for a table of contents, and below for related topics in the forums.
 
-<br>
-<br>
-<br>
-
 **Intermediate**
 
 - [Per task plug-ins](http://forums.pyblish.com/t/task-specific-plugins/127)
@@ -57,9 +53,6 @@ Now have a look to the left for a table of contents, and below for related topic
 - [Good to know about Pyblish](http://forums.pyblish.com/t/good-to-know-about-pyblish)
 - [`hosts` Attribute In-Depth](http://forums.pyblish.com/t/the-use-of-hosts-attribute/78/3)
 
-<br>
-<br>
-<br>
 
 **Advanced**
 
