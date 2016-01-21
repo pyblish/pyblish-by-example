@@ -79,7 +79,8 @@ class ExtractRig(pyblish.api.InstancePlugin):
   families = ["rig"]
   hosts = ["maya"]
 
-  def process(self, context, instance):
+  def process(self, instance):
+    context = instance.context
     dirname = os.path.dirname(context.data("currentFile"))
     name, family = instance.data("name"), instance.data("family")
     date = pyblish.api.format_filename(context.data("date"))
