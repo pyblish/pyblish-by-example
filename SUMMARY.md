@@ -1,5 +1,4 @@
 # Summary
 
-* [Content](content.md)
-   * [Hello World](01-hello-world.md)
-
+[Hello World](01-hello-world.md)
+[Quickstart](02-quickstart.md)
