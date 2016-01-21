@@ -66,6 +66,9 @@ Now have a look to the left for a table of contents, and below for related topic
 - [Developer Guide](http://forums.pyblish.com/t/developer-guide)
 - [Pyblish in 200 lines](https://pyblish.gitbooks.io/developer-guide/content/pyblish_in_200_lines.html)
 
+<br>
+<br>
+<br>
 
 **Changelog**
 
