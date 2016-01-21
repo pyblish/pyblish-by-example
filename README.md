@@ -7,13 +7,15 @@
 ### You will learn
 
 - The basics of publishing in the production of film and games
-- The fundamentals of Pyblish and it's API
+- The fundamentals of [Pyblish][] and it's API
 - How to validate content
 - How to guarantee valid content on export 
 - How to properly position and name content according to convention
 - How to visualise the results of one or more publishes
 - Developer and Artist communication through the UI
 
+
+[Pyblish](http://pyblish.com)
 
 <br>
 <br>
