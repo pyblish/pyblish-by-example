@@ -2,7 +2,7 @@
 
 Writing a report and archiving it is all well and good, but what would be really amazing is if we could visualise history with plots and charts. So let's do that now.
 
-<img src="/uploads/default/original/1X/89d8d868b6ae9bd40cd44338210d0c5e78497190.png" width="407" height="259">
+![image](https://cloud.githubusercontent.com/assets/2152766/12515462/626c08a6-c120-11e5-8036-74b0a6e6f96b.png)
 
 For this example, I'll be using [pygal](http://pygal.org/) so go ahead and install this if you would like to follow along. Reusing `ArchiveValidators` from the previous example, let's make some history.
 
