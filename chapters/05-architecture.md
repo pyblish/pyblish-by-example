@@ -9,11 +9,12 @@ Besides plug-ins, there are two primary objects that are of interest to you.
 
 The `Context` represents the world, typically your current working file, and contains 1 or more `Instance`.
 
-<img src="/uploads/default/original/1X/8c3cd97a282a0f7991caea588f3629dfb27988e1.png" width="241" height="185">
+![image](https://cloud.githubusercontent.com/assets/2152766/12515123/ac0ec266-c11e-11e5-803f-8e83fac3b20d.png)
+
 
 You can think of `Instance` as a *subdivision* of `Context`, each pertaining to a specific area of the bigger picture, such as an image sequence or a model. When publishing, you can choose to consider either the world, part of the world, or both.
 
-<img src="/uploads/default/original/1X/226e0570eb17098b01b9312ccb985f47d8de3879.png" width="243" height="179"> 
+![image](https://cloud.githubusercontent.com/assets/2152766/12515132/b6693872-c11e-11e5-911d-43387571751a.png)
 
 In some cases, it makes sense to only look at a small portion of a working file, either for precision or special treatment. If your `Context` is a scene from Start Wars, you might treat Luke different from how you treat The Death Star, for example.
 
