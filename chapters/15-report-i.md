@@ -16,15 +16,11 @@ Let's dive into the plug-ins now.
 ```python
 import pyblish.api
 
-class CollectCaptainAmerica(pyblish.api.ContextPlugin):
-  order = pyblish.api.CollectorOrder
-
+class CollectCaptainAmerica(pyblish.api.Collector):
   def process(self, context):
     context.create_instance("Captain America", isHero=False)
 
-class ValidateCaptainAmerica(pyblish.api.InstancePlugin):
-  order = pyblish.api.ValidatorOrder
-
+class ValidateCaptainAmerica(pyblish.api.Validator):
   def process(self, instance):
     # Any raised exception will mark a plug-in as failed
     assert instance.data.get("isHero") == True, "%s must be a hero" % instance

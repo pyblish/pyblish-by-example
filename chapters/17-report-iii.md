@@ -18,9 +18,7 @@ Here is what we will be developing in this example.
 For this, we will utilise the built-in logger.
 
 ```python
-class ValidateCaptainAmerica(pyblish.api.InstancePlugin):
-  order = pyblish.api.ValidatorOrder
-
+class ValidateCaptainAmerica(pyblish.api.Validator):
   def process(self, instance):
     self.log.info("Entering validator..")
     self.log.info("About to validate instance: %s" % instance)
@@ -66,15 +64,11 @@ Putting it all together, here is the full source code.
 ```python
 import pyblish.api
 
-class CollectCaptainAmerica(pyblish.api.ContextPlugin):
-  order = pyblish.api.CollectorOrder
-
+class CollectCaptainAmerica(pyblish.api.Collector):
   def process(self, context):
     context.create_instance("Captain America", isHero=False)
 
-class ValidateCaptainAmerica(pyblish.api.InstancePlugin):
-  order = pyblish.api.ValidatorOrder
-
+class ValidateCaptainAmerica(pyblish.api.Validator):
   def process(self, instance):
     self.log.info("Entering validator..")
     self.log.info("About to validate instance: %s" % instance)

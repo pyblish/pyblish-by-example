@@ -8,7 +8,7 @@ import pyblish.api
 disk = {}
 items = ["JOHN.person", "door.prop"]
 
-class CollectInstances(pyblish.api.ContextPlugin):
+class CollectInstances(pyblish.api.Plugin):
   order = 10
 
   def process(self, context):
@@ -16,7 +16,7 @@ class CollectInstances(pyblish.api.ContextPlugin):
       name, suffix = item.split(".")
       context.create_instance(name, family=suffix)
 
-class ValidateNamingConvention(pyblish.api.InstancePlugin):
+class ValidateNamingConvention(pyblish.api.Plugin):
   order = 20
 
   def process(self, instance):
@@ -24,7 +24,7 @@ class ValidateNamingConvention(pyblish.api.InstancePlugin):
     assert name == name.title(), "Sorry, %s should have been %s" % (
       name, name.title())
 
-class ExtractInstances(pyblish.api.InstancePlugin):
+class ExtractInstances(pyblish.api.Plugin):
   order = 30
 
   def process(self, instance):
@@ -40,17 +40,69 @@ print("JOHN" in disk)
 # True
 ```
 
-To remedy this, we'll turn our attention to some of the pre-defined *orders* provided by Pyblish.
+To remedy this, we can write a "test" that looks like this.
 
-- Collection
-- Validation
-- Extraction
-- Integration
+```python
+def my_test(**vars):
+  if vars["nextOrder"] >= 30 and 20 in vars["ordersWithError"]:
+    return "failed validation, sorry!"
 
-Collection typically runs and sets the stage for validation, and once validation is complete Pyblish takes a moment to consider whether any of the plug-ins that ran threw an error. If so, it stops processing and returns control to the user. 
+pyblish.api.register_test(my_test)
+```
 
-This behaviour is paramount to publishing and can be visualised graphically like this.
+The test can be visualised graphically like this.
 
 ![image](https://cloud.githubusercontent.com/assets/2152766/12515092/752725ea-c11e-11e5-923c-ace968721a38.png)
 
-In the next example, we will dig deeper into this mechanism and find out more about what it can do for us.
+The reason for its complexity comes from the fact that we wish *all* validators to run before stopping, even if the first one fails, such that we can get a complete overview of what went wrong.
+
+Don't worry, you won't actually have to write or understand how tests work. The default test provided by Pyblish covers the majority of use-cases, and we'll take a closer look at this in the next example.
+
+For now, all you need to know is that it exists and is customisable should you need it.
+
+Here is the full source code, if you would like to try it out.
+
+```python
+import pyblish.api
+
+disk = {}
+items = ["JOHN.person", "door.prop"]
+
+class CollectInstances(pyblish.api.Plugin):
+  order = 10
+
+  def process(self, context):
+    for item in items:
+      name, suffix = item.split(".")
+      context.create_instance(name, family=suffix)
+
+class ValidateNamingConvention(pyblish.api.Plugin):
+  order = 20
+
+  def process(self, instance):
+    name = instance.data["name"]
+    assert name == name.title(), "Sorry, %s should have been %s" % (
+      name, name.title())
+
+class ExtractInstances(pyblish.api.Plugin):
+  order = 30
+
+  def process(self, instance):
+    disk[instance.data["name"]] = instance
+
+
+def my_test(**vars):
+  if vars["nextOrder"] >= 30 and 20 in vars["ordersWithError"]:
+    return "failed validation, sorry!"
+
+pyblish.api.register_plugin(CollectInstances)
+pyblish.api.register_plugin(ValidateNamingConvention)
+pyblish.api.register_plugin(ExtractInstances)
+pyblish.api.register_test(my_test)
+
+import pyblish.util
+pyblish.util.publish()
+# Publishing stopped due to failed validation, sorry!
+print("JOHN" in disk)
+# False
+```

@@ -47,16 +47,12 @@ We can now `from maya import cmds`, which we will use during collection and extr
 import pyblish.api
 from maya import cmds
 
-class CollectInstances(pyblish.api.ContextPlugin):
-  order = pyblish.api.CollectorOrder
-
+class CollectInstances(pyblish.api.Collector):
   def process(self, context):
     for name in cmds.ls(type="transform", assemblies=True):
       context.create_instance(name)
 
-class ExtractInstances(pyblish.api.InstancePlugin):
-  order = pyblish.api.ExtractorOrder
-
+class ExtractInstances(pyblish.api.Extractor):
   def process(self, instance):
     # 1. Compute temporary output path
     name = instance.data["name"]
@@ -73,10 +69,7 @@ class ExtractInstances(pyblish.api.InstancePlugin):
 Now let's integrate the data from `temp` on `disk` into our `server`.
 
 ```python
-class IntegrateInstances(pyblish.api.InstancePlugin):
-
-  order = pyblish.api.IntegratorOrder
-
+class IntegrateInstances(pyblish.api.Integrator):
   def process(self, instance):
     transient_dest = instance.data["transientDest"]
     permanent_dest = "/instances/%s.mb" % instance
@@ -117,16 +110,12 @@ sys.modules["maya"] = maya
 import pyblish.api
 from maya import cmds
 
-class CollectInstances(pyblish.api.ContextPlugin):
-  order = pyblish.api.CollectorOrder
-
+class CollectInstances(pyblish.api.Collector):
   def process(self, context):
     for name in cmds.ls(type="transform", assemblies=True):
       context.create_instance(name)
 
-class ExtractInstances(pyblish.api.InstancePlugin):
-  order = pyblish.api.ExtractorOrder
-
+class ExtractInstances(pyblish.api.Extractor):
   def process(self, instance):
     # 1. Compute temporary output path
     name = instance.data["name"]
@@ -139,9 +128,7 @@ class ExtractInstances(pyblish.api.InstancePlugin):
     # 3. Store reference for subsequent plug-ins
     instance.data["transientDest"] = transient_path
 
-class IntegrateInstances(pyblish.api.InstancePlugin):
-  order = pyblish.api.IntegratorOrder
-
+class IntegrateInstances(pyblish.api.Integrator):
   def process(self, instance):
     transient_dest = instance.data["transientDest"]
     permanent_dest = "/instances/%s.mb" % instance

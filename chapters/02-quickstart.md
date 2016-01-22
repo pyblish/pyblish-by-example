@@ -8,7 +8,7 @@ The examples will be written primarily for Autodesk Maya, but should be easily r
 
 ### Deep end
 
-The example uses the 2 available superclasses in Pyblish - `ContextPlugin` and `InstancePlugin`. The order in which these plug-ins are run, is controlled by an integer attribute called `order`, each integer associated with a conceptual publishing stage shown below.
+The example uses 4 out of the 5 available superclasses in Pyblish - `Collector`, `Validator`, `Extractor` and `Integrator` - triggered in said order, with one critical piece of logic; "is it valid"?
 
 ![image](https://cloud.githubusercontent.com/assets/2152766/12515092/752725ea-c11e-11e5-923c-ace968721a38.png)
 
@@ -20,10 +20,8 @@ Gather information to validate and export.
 import pyblish.api
 from maya import cmds
 
-class CollectRig(pyblish.api.ContextPlugin):
+class CollectRig(pyblish.api.Collector):
   """Discover and collect available rigs into the context"""
-
-  order = pyblish.api.ContextOrder  # Order 0; first
 
   def process(self, context):
     for node in cmds.ls(sets=True):
@@ -50,10 +48,9 @@ Ensure the correctness of collected information.
 ```python
 import pyblish.api
 
-class ValidateRigContents(pyblish.api.InstancePlugin):
+class ValidateRigContents(pyblish.api.Validator):
   """Ensure rig has the appropriate object sets"""
 
-  order = pyblish.api.ValidatorOrder  # Order 1; after first
   families = ["rig"]
 
   def process(self, instance):
@@ -72,15 +69,13 @@ import shutil
 import pyblish.api
 from maya import cmds
 
-class ExtractRig(pyblish.api.InstancePlugin):
+class ExtractRig(pyblish.api.Extractor):
   """Serialise valid rig"""
 
-  order = pyblish.api.ExtractorOrder
   families = ["rig"]
   hosts = ["maya"]
 
-  def process(self, instance):
-    context = instance.context
+  def process(self, context, instance):
     dirname = os.path.dirname(context.data("currentFile"))
     name, family = instance.data("name"), instance.data("family")
     date = pyblish.api.format_filename(context.data("date"))
@@ -115,17 +110,12 @@ import shutil
 
 import pyblish.api
 
-class IntegrateRig(pyblish.api.InstancePlugin):
+class IntegrateRig(pyblish.api.Integrator):
   """Copy files to an appropriate location where others may reach it"""
-
-  order = pyblish.api.IntegratorOrder
   families = ["rig"]
 
-  def process(self, instance):
+  def process(self, context, instance):
     assert instance.data("tempdir"), "Can't find rig on disk, aborting.."
-
-    # Access top-level context via instance
-    context = instance.context
 
     self.log.info("Computing output directory..")
     dirname = os.path.dirname(context.data("currentFile"))

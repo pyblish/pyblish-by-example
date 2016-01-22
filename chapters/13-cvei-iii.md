@@ -1,8 +1,22 @@
 ### CVEI III
 
-As a final note about CVEI, it's a convention on which order to pick for a typical task.
+As a final note about CVEI, here is their full source code, excluding docstrings.
 
-The advantage of using these particular orders isn't as much functional as it is conventional. The benefits are two-fold.
+```python
+class Collector(pyblish.api.Plugin):
+  order = 0
+
+class Validator(pyblish.api.Plugin):
+  order = 1
+
+class Extractor(pyblish.api.Plugin):
+  order = 2
+
+class Integrator(pyblish.api.Plugin):
+  order = 3
+```
+
+The advantage of using these subclasses clearly isn't functional, but conventional. The benefits are two-fold.
 
 1. They provide a common language with which to discuss publishing.
 2. They allow Pyblish to make assumptions about your plug-ins, such as when to abort.
@@ -18,3 +32,5 @@ plugins
 ├── extract_instances.py
 └── integrate_instances.py
 ```
+
+> Collections is a.k.a. Selection and Integration is a.k.a. Conform

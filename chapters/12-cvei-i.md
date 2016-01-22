@@ -1,6 +1,6 @@
 ### CVEI I
 
-Because the order of the above technique of (1) collecting, (2) validating and (3) extract-if-valid is so common, they are provided as keywords you can use in-place of a hard-coded number.
+Because the above technique of (1) collecting, (2) validating and (3) extract-if-valid is so common, they are each provided as a superclass.
 
 ```python
 import pyblish.api
@@ -8,28 +8,19 @@ import pyblish.api
 disk = {}
 items = ["JOHN.person", "door.prop"]
 
-class CollectInstances(pyblish.api.ContextPlugin):
-
-  order = pyblish.api.CollectorOrder  # <-- This is new
-
+class CollectInstances(pyblish.api.Collector):
   def process(self, context):
     for item in items:
       name, suffix = item.split(".")
       context.create_instance(name, family=suffix)
 
-class ValidateNamingConvention(pyblish.api.InstancePlugin):
-
-  order = pyblish.api.ValidatorOrder
-
+class ValidateNamingConvention(pyblish.api.Validator):
   def process(self, instance):
     name = instance.data["name"]
     assert name == name.title(), "Sorry, %s should have been %s" % (
       name, name.title())
 
-class ExtractInstances(pyblish.api.InstancePlugin):
-
-  order = pyblish.api.ExtractorOrder
-
+class ExtractInstances(pyblish.api.Extractor):
   def process(self, instance):
     disk[instance.data["name"]] = instance
 
@@ -43,14 +34,12 @@ pyblish.util.publish()
 # Sorry, door should have been Door
 ```
 
-Notice that instead of picking a number at random, we instead utilised the built-in order of CVEI. This not only simplifies determining the role of each plug-in, it also allows Pyblish to make some basic assumptions about your plug-ins, such as when to stop.
-
-These *constants* are nothing more than integer numbers.
+Notice that we didn't have to specify an `order` nor create and register a test. Each variation comes with a pre-determined order. The default test then take it into consideration.
 
 ```yaml
-CollectorOrder: 0
-ValidatorOrder: 1
-ExtractorOrder: 2
+Collector: 0
+Validator: 1
+Extractor: 2
 ```
 
 Together, they form the first three letters of "CVEI". We'll look at the last letter next.

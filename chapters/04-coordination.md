@@ -12,16 +12,16 @@ That's because plug-ins are sorted by the class attribute `order`, and we didn't
 ```python
 import pyblish.api
 
-class FirstPlugin(pyblish.api.ContextPlugin):
+class FirstPlugin(pyblish.api.Plugin):
   order = 10
 
-  def process(self, context):
+  def process(self):
     print("hello")
 
-class SecondPlugin(pyblish.api.ContextPlugin):
+class SecondPlugin(pyblish.api.Plugin):
   order = 20
 
-  def process(self, context):
+  def process(self):
     print("world")
 
 pyblish.api.register_plugin(FirstPlugin)

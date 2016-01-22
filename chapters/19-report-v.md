@@ -2,7 +2,7 @@
 
 Writing a report and archiving it is all well and good, but what would be really amazing is if we could visualise history with plots and charts. So let's do that now.
 
-![image](https://cloud.githubusercontent.com/assets/2152766/12515462/626c08a6-c120-11e5-8036-74b0a6e6f96b.png)
+<img src="/uploads/default/original/1X/89d8d868b6ae9bd40cd44338210d0c5e78497190.png" width="407" height="259">
 
 For this example, I'll be using [pygal](http://pygal.org/) so go ahead and install this if you would like to follow along. Reusing `ArchiveValidators` from the previous example, let's make some history.
 
@@ -11,15 +11,16 @@ import os
 import random
 import datetime
 import pyblish.api
-class FlipCoin(pyblish.api.ContextPlugin):
-  def process(self, context):
+
+class FlipCoin(pyblish.api.Validator):
+  def process(self):
     if random.random() > 0.5:
         raise Exception("Failed")
 
-class ArchiveValidation(pyblish.api.ContextPlugin):
+class ArchiveValidation(pyblish.api.Plugin):
   ...
 
-pyblishOpi.register_plugin(FlipCoin)
+pyblish.api.register_plugin(FlipCoin)
 pyblish.api.register_plugin(ArchiveValidation)
 
 import pyblish.util
@@ -65,14 +66,15 @@ import datetime
 import pygal
 import pyblish.api
 
-class FlipCoin(pyblish.api.ContextPlugin):
-  def process(self, context):
+
+class FlipCoin(pyblish.api.Validator):
+  def process(self):
     if random.random() > 0.5:
         raise Exception("Failed")
 
-class ArchiveValidation(pyblish.api.ContextPlugin):
+class ArchiveValidation(pyblish.api.Plugin):
   # Run after all validators have finished
-  order = pyblish.api.ValidatorOrder + 0.1
+  order = pyblish.api.Validator.order + 0.1
 
   def process(self, context):
     formatted_results = self.format_results(context)
@@ -125,9 +127,9 @@ class ArchiveValidation(pyblish.api.ContextPlugin):
       results="\n".join(results),
       line="-" * 70)
 
-class PlotArchive(pyblish.api.ContextPlugin):
+class PlotArchive(pyblish.api.Plugin):
     # Run after archival
-    order = pyblish.api.ValidatorOrder + 0.2
+    order = pyblish.api.Validator.order + 0.2
 
     def process(self, context):
         input_path = context.data["archiveDir"]

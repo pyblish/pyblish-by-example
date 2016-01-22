@@ -7,14 +7,14 @@ import pyblish.api
 
 items = ["john", "door"]
 
-class CollectInstances(pyblish.api.ContextPlugin):
+class CollectInstances(pyblish.api.Plugin):
   order = 10
 
   def process(self, context):
     for item in items:
       context.create_instance(item)
 
-class PrintInstances(pyblish.api.InstancePlugin):
+class PrintInstances(pyblish.api.Plugin):
   order = 20
 
   def process(self, instance):
@@ -31,4 +31,4 @@ pyblish.util.publish()
 
 In this case, `PrintInstances` will run once for every instance.
 
-Pyblish knows to do this because we subclassed from [InstancePlugin][] instead of [ContextPlugin][], which differs in that it runs once for ever available [Instance][] as opposed to just once for the [Context][]. These two superclasses form the foundation upon which all of Pyblish is built, we'll have a much closer look these at in the following examples.
+Pyblish knows to do this because it asks specifically for `instance`, if it didn't it would only be processed a single time. This is a very powerful technique, one we'll have a much closer look at in the following examples.

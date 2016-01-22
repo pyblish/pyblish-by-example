@@ -18,15 +18,15 @@ import os
 import datetime
 import pyblish.api
 
-class ArchiveValidation(pyblish.api.ContextPlugin):
+class ArchiveValidation(pyblish.api.Plugin):
   # Run after all validators have finished
-  order = pyblish.api.ValidatorOrder + 0.1
+  order = pyblish.api.Validator.order + 0.1
 
-  def process(self, context):
+  def process(self, context, time):
     formatted_results = self.format_results(context)
 
     # Compute output directory
-    date = datetime.datetime.today().ctime()
+    date = datetime.datetime.today().strftime("%Y%m%d-%H%M%S")
     output_dir = os.path.join(os.path.expanduser("~"), "logs")
     output_path = os.path.join(output_dir, date + ".txt")
 
@@ -81,15 +81,11 @@ import os
 import datetime
 import pyblish.api
 
-class CollectCaptainAmerica(pyblish.api.ContextPlugin):
-  order = pyblish.api.CollectorOrder
-
+class CollectCaptainAmerica(pyblish.api.Collector):
   def process(self, context):
     context.create_instance("Captain America", isHero=False)
 
-class ValidateCaptainAmerica(pyblish.api.InstancePlugin):
-  order = pyblish.api.ValidatorOrder
-
+class ValidateCaptainAmerica(pyblish.api.Validator):
   def process(self, instance):
     self.log.info("Entering validator..")
     self.log.info("About to validate instance: %s" % instance)
@@ -98,15 +94,15 @@ class ValidateCaptainAmerica(pyblish.api.InstancePlugin):
         self.log.warning("Something is not right.. aborting")
         raise Exception("%s must be a hero" % instance)
 
-class ArchiveValidation(pyblish.api.ContextPlugin):
+class ArchiveValidation(pyblish.api.Plugin):
   # Run after all validators have finished
-  order = pyblish.api.ValidatorOrder + 0.1
+  order = pyblish.api.Validator.order + 0.1
 
   def process(self, context):
     formatted_results = self.format_results(context)
 
     # Compute output directory
-    date = datetime.datetime.today().ctime()
+    date = datetime.datetime.today().strftime("%Y%m%d-%H%M%S")
     output_dir = os.path.join(os.path.expanduser("~"), "logs")
     output_path = os.path.join(output_dir, date + ".txt")
 

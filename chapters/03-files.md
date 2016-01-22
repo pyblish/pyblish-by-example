@@ -13,8 +13,8 @@ Here is the full source code.
 # myplugin1.py
 import pyblish.api
 
-class MyPlugin1(pyblish.api.ContextPlugin):
-  def process(self, context):
+class MyPlugin1(pyblish.api.Plugin):
+  def process(self):
     print("hello from plugin1")
 ```
 
@@ -22,8 +22,8 @@ class MyPlugin1(pyblish.api.ContextPlugin):
 # myplugin2.py
 import pyblish.api
 
-class MyPlugin2(pyblish.api.ContextPlugin):
-  def process(self, context):
+class MyPlugin2(pyblish.api.Plugin):
+  def process(self):
     print("hello from plugin2")
 ```
 

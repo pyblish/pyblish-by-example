@@ -7,7 +7,7 @@ import pyblish.api
 
 items = ["JOHN.person", "door.prop"]
 
-class CollectInstances(pyblish.api.ContextPlugin):
+class CollectInstances(pyblish.api.Plugin):
   order = 10
 
   def process(self, context):
@@ -15,7 +15,7 @@ class CollectInstances(pyblish.api.ContextPlugin):
       name, suffix = item.split(".")
       context.create_instance(name, family=suffix)
 
-class ValidateNamingConvention(pyblish.api.InstancePlugin):
+class ValidateNamingConvention(pyblish.api.Plugin):
   order = 20
 
   def process(self, instance):
