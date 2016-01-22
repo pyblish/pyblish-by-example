@@ -14,11 +14,11 @@
 * [Validating II](chapters/11-validating-ii.md)
 * [CVEI I](chapters/12-cvei-i.md)
 * [CVEI II](chapters/13-cvei-ii.md)
+* CVEI III
 * [Data](chapters/14-data.md)
 * [Report I](chapters/15-report-i.md)
 * [Report II](chapters/16-report-ii.md)
 * [Report III](chapters/17-report-iii.md)
 * [Report IV](chapters/18-report-iv.md)
 * [Report V](chapters/19-report-v.md)
-* CVEI III
 
