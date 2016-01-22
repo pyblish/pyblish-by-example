@@ -51,6 +51,6 @@ Collection typically runs and sets the stage for validation, and once validation
 
 This behaviour is paramount to publishing and can be visualised graphically like this.
 
-<img src="/uploads/default/original/1X/23a6c55d50c3de7d7a374737172c82d4cd687af6.png" width="690" height="231"> 
+![image](https://cloud.githubusercontent.com/assets/2152766/12515092/752725ea-c11e-11e5-923c-ace968721a38.png)
 
 In the next example, we will dig deeper into this mechanism and find out more about what it can do for us.
