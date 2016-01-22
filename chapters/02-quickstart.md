@@ -10,7 +10,7 @@ The examples will be written primarily for Autodesk Maya, but should be easily r
 
 The example uses the 2 available superclasses in Pyblish - `ContextPlugin` and `InstancePlugin`. The order in which these plug-ins are run, is controlled by an integer attribute called `order`, each integer associated with a conceptual publishing stage shown below.
 
-![](http://forums.pyblish.com/uploads/default/original/1X/23a6c55d50c3de7d7a374737172c82d4cd687af6.png)
+![image](https://cloud.githubusercontent.com/assets/2152766/12515092/752725ea-c11e-11e5-923c-ace968721a38.png)
 
 **1. collect_rig.py**
 
