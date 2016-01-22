@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](README.md)
 * [Hello World](chapters/01-hello-world.md)
 * [Quickstart](chapters/02-quickstart.md)
 * [Files](chapters/03-files.md)
@@ -19,3 +20,5 @@
 * [Report III](chapters/17-report-iii.md)
 * [Report IV](chapters/18-report-iv.md)
 * [Report V](chapters/19-report-v.md)
+* CVEI III
+
