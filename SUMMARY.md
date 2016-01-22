@@ -14,7 +14,7 @@
 * [Validating II](chapters/11-validating-ii.md)
 * [CVEI I](chapters/12-cvei-i.md)
 * [CVEI II](chapters/13-cvei-ii.md)
-* CVEI III
+* [CVEI III](13-cvei-iii.md)
 * [Data](chapters/14-data.md)
 * [Report I](chapters/15-report-i.md)
 * [Report II](chapters/16-report-ii.md)
