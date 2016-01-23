@@ -25,28 +25,22 @@
 
 Pyblish is an open source, cross-platform framework designed for test-driven content creation.
 
+- [What is Publishing?](https://github.com/pyblish/pyblish/wiki/What-is-publishing)
+
 *Pyblish by Example* is a hands-on introduction to Pyblish using short example programs, designed to read from top-to-bottom; like a book. 
 
 You can use either the "core" library, containing only a scripting- and command-line interface, or you can supplement this with a GUI.
 
-**Scripting Interface**
-
-![untitled](https://cloud.githubusercontent.com/assets/2152766/12530087/18a797b2-c1ca-11e5-9164-64f1abaaa43b.gif)
-
-**Graphical User Interface**
-
-![3857fe12a3d4ff38de415fd1372f9d2c93e0f3c5](https://cloud.githubusercontent.com/assets/2152766/12530090/51e534b2-c1ca-11e5-9a48-8d51195691a3.gif)
-
-
 [pyblish-qml]: http://github.com/pyblish/pyblish-qml
 [1]: http://forums.pyblish.com/t/learning-pyblish-by-example/108/2
 
+<br>
+<br>
+<br>
 
-**For Starters**
+### Installation
 
 If you haven't already, go ahead and install Pyblish for [Windows][w], [Linux][l] or [OSX][o].
-
-- [What is Publishing?](https://github.com/pyblish/pyblish/wiki/What-is-publishing)
 
 [w]: https://github.com/pyblish/pyblish-win/wiki/Installation
 [l]: https://github.com/pyblish/pyblish-linux/wiki
