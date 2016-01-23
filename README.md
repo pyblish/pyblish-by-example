@@ -23,7 +23,7 @@
 
 ### Introduction
 
-Pyblish is an open source framework designed for test-driven content creation.
+Pyblish is an open source, cross-platform framework designed for test-driven content creation.
 
 *Pyblish by Example* is a hands-on introduction to Pyblish using short example programs, designed to read from top-to-bottom; like a book. 
 
