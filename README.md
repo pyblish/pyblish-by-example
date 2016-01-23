@@ -25,7 +25,7 @@
 
 Pyblish is an open source framework designed for test-driven content creation.
 
-Pyblish by Example is a hands-on introduction to Pyblish using short example programs. Check out the [first example][1] or browse the full list below.
+Pyblish by Example is a hands-on introduction to Pyblish using short example programs, designed to read from top-to-bottom; like a book.
 
 [1]: http://forums.pyblish.com/t/learning-pyblish-by-example/108/2
 
