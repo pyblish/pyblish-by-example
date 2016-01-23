@@ -32,3 +32,8 @@ pyblish.util.publish()
 In this case, `PrintInstances` will run once for every instance.
 
 Pyblish knows to do this because we subclassed from [InstancePlugin][] instead of [ContextPlugin][], which differs in that it runs once for ever available [Instance][] as opposed to just once for the [Context][]. These two superclasses form the foundation upon which all of Pyblish is built, we'll have a much closer look these at in the following examples.
+
+[ContextPlugin]: https://github.com/pyblish/pyblish.api/wiki/ContextPlugin
+[InstancePlugin]: https://github.com/pyblish/pyblish.api/wiki/InstancePlugin
+[Context]: https://github.com/pyblish/pyblish.api/wiki/Context
+[Instance]: https://github.com/pyblish/pyblish.api/wiki/Instance
