@@ -66,6 +66,8 @@ This will install both the scripting, command-line and graphical user interface.
 $ pip install pyblish
 ```
 
+This will install just the scripting- and command-line interfaces and occupies 1.17 mb of disk space (1.10 mb of which is vendor packages).
+
 <br>
 <br>
 <br>
