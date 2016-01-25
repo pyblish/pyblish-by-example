@@ -1,5 +1,7 @@
 ![Pyblish by Example](https://cloud.githubusercontent.com/assets/2152766/12489260/51843d38-c067-11e5-93c8-7b96c30ed37a.png)
 
+Welcome to the Pyblish by Example tutorial.
+
 <br>
 <br>
 <br>
@@ -25,11 +27,19 @@
 
 Pyblish is an open source, cross-platform framework designed for test-driven content creation.
 
-- [What is Publishing?](https://github.com/pyblish/pyblish/wiki/What-is-publishing)
-
 *Pyblish by Example* is a hands-on introduction to Pyblish using short example programs, designed to read from top-to-bottom; like a book. 
 
-You can use either the "core" library, containing only a scripting- and command-line interface, or you can supplement this with a GUI.
+- [What is Publishing?](https://github.com/pyblish/pyblish/wiki/What-is-publishing)
+
+
+<br>
+<br>
+<br>
+
+### How to use this guide
+
+As you read through this guide, you can choose to use either the "core" library, consisting of a scripting- and command-line interface, or you can supplement your experience with a GUI; which is most like the actual experience of your users.
+
 
 [pyblish-qml]: http://github.com/pyblish/pyblish-qml
 [1]: http://forums.pyblish.com/t/learning-pyblish-by-example/108/2
@@ -42,11 +52,27 @@ You can use either the "core" library, containing only a scripting- and command-
 
 If you haven't already, go ahead and install Pyblish for [Windows][w], [Linux][l] or [OSX][o].
 
+- [Windows][w]
+- [Linux][l]
+- [OSX][o]
+
 [w]: https://github.com/pyblish/pyblish-win/wiki/Installation
 [l]: https://github.com/pyblish/pyblish-linux/wiki
 [o]: https://github.com/pyblish/pyblish-osx/wiki
 
-Now have a look to the left for a table of contents, and below for related topics in the forums.
+This will install both the scripting, command-line and graphical user interface. You can instead choose to install the bare essentials via `pip`.
+
+```bash
+$ pip install pyblish
+```
+
+<br>
+<br>
+<br>
+
+### Content
+
+Have a look to the left for a table of contents, and below for related topics in the forums.
 
 **Intermediate**
 
