@@ -7,8 +7,8 @@ import pyblish.api
 
 def on_published(context):
   has_error = any(result["error"] is not None for result in context.data["results"])
-  print("Publishing %s" % "finished" if has_error else "failed")
- 
+  print("Publishing %s" % ("finished" if has_error else "failed"))
+
 pyblish.api.register_callback("published", on_published)
 ```
 
