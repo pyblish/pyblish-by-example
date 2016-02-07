@@ -22,3 +22,9 @@ def on_my_event(data):
  
 pyblish.api.register_callback("myEvent", on_my_event)
 ```
+
+Callbacks can be useful for, amongst other things:
+
+- Deep customisation
+- Advanced logging
+- Tighter integration
