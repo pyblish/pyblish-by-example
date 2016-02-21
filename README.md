@@ -48,6 +48,17 @@ As you read through this guide, you can choose to use either the "core" library,
 <br>
 <br>
 
+### Reporting issues
+
+Should you happen to find errors or would like to contribute material to this guide, see the parent GitHub project for more information.
+
+- [Pyblish by Example on GitHub](https://github.com/pyblish/pyblish-by-example)
+
+
+<br>
+<br>
+<br>
+
 ### Installation
 
 If you haven't already, go ahead and install Pyblish for [Windows][w], [Linux][l] or [OSX][o].
