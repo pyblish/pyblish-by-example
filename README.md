@@ -102,7 +102,7 @@ Have a look to the left for a table of contents, and below for related topics in
 **Advanced**
 
 - [Developer Guide](http://forums.pyblish.com/t/developer-guide)
-- [Pyblish in 200 lines](https://pyblish.gitbooks.io/developer-guide/content/pyblish_in_200_lines.html)
+- [Pyblish in 100 lines](https://pyblish.gitbooks.io/developer-guide/content/pyblish_in_100_lines.html)
 
 <br>
 <br>
