@@ -154,7 +154,7 @@ I'm sure you have lots of questions, but don't worry. This is the part where we 
 
 To run this in your own Maya, copy and run this entire file in your Script Editor.
 
-- [Full Example Source Code](https://gist.github.com/mottosso/43ae098312ef40b3f3c8)
+- [Full Example Source Code](https://gist.github.com/mottosso/93399862c94f0ab4314f)
 
 You will be greeted by the Pyblish GUI, something we will talk more about later. For the most part, we will use the scripted version of this, but feel free to keep using the GUI if you'd like. It works in exactly the same way.
 
