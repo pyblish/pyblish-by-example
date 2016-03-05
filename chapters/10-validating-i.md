@@ -30,6 +30,7 @@ import pyblish.util
 pyblish.util.publish()
 # Sorry, JOHN should have been John
 # Sorry, door should have been Door
+Stopped due to: failed validation
 ```
 
 We indicate failure by throwing exceptions of any kind, including assertions. Making the change, we now "pass validation".
