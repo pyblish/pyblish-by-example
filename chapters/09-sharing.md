@@ -20,6 +20,7 @@ class WriteTime(pyblish.api.ContextPlugin):
     user_dir = context.data["userDir"]
     destination_path = os.path.join(user_dir, "time.txt")
 
+    print("Writing time to %s" % destination_path)
     with open(destination_path, "w") as f:
       f.write("The time is %s" % datetime.datetime.today().ctime())
 
