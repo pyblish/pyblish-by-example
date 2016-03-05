@@ -55,7 +55,7 @@ pyblish.util.publish()
 
 `context` is a special argument in Pyblish. By adding this to the list of arguments to `process()`, you gain access to an the current `Context`, as mentioned above.
 
-This object is shared amongst plug-ins and can be used to pass information from one plug-in to another. The `Context` is also accessible from the return value of `publish()`.
+You can use this object to pass information from one plug-in to another. The `Context` is also accessible from the return value of `publish()`.
 
 ```python
 context = pyblish.util.publish()
