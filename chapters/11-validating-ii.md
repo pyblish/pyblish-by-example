@@ -49,7 +49,7 @@ To remedy this, we'll turn our attention to some of the pre-defined *orders* pro
 
 Collection typically runs and sets the stage for validation, and once validation is complete Pyblish takes a moment to consider whether any of the plug-ins that ran threw an error. If so, it stops processing and returns control to the user. 
 
-This behaviour is paramount to publishing and can be visualised graphically like this.
+This behavior is paramount to publishing. If you think back to [Quickstart](Quickstart.md) earlies in this guide, you may remember the following visualisation of it.
 
 ![image](https://cloud.githubusercontent.com/assets/2152766/12515092/752725ea-c11e-11e5-923c-ace968721a38.png)
 
