@@ -27,6 +27,7 @@ class ArchiveValidation(pyblish.api.ContextPlugin):
 
     # Compute output directory
     date = datetime.datetime.today().ctime()
+    date = pyblish.api.format_filename(date)
     output_dir = os.path.join(os.path.expanduser("~"), "logs")
     output_path = os.path.join(output_dir, date + ".txt")
 
@@ -55,7 +56,7 @@ We copy/paste the formatting from our previous example and chuck it into `format
     
       # Format log records
       for lr in r["records"]:
-        results.append(record.format("", level=lr.levelname, message=lr.message))
+        results.append(record.format("", level=lr.levelname, message=lr.msg))
     
       # Format exception (if any)
       if r["error"]:
@@ -107,13 +108,14 @@ class ArchiveValidation(pyblish.api.ContextPlugin):
 
     # Compute output directory
     date = datetime.datetime.today().ctime()
+    date = pyblish.api.format_filename(date)
     output_dir = os.path.join(os.path.expanduser("~"), "logs")
     output_path = os.path.join(output_dir, date + ".txt")
 
     # Write to disk
     if not os.path.exists(output_dir):
       os.makedirs(output_dir)
-      
+
     with open(output_path, "w") as f:
       # E.g. c:\users\marcus\Documents\logs\20150612-110000.txt
       f.write(formatted_results)
@@ -127,20 +129,20 @@ class ArchiveValidation(pyblish.api.ContextPlugin):
     result = "{success:<10}{plugin.__name__:<40} -> {instance}"
     error = "{:<10}+-- EXCEPTION: {:<70}"
     record = "{:<10}+-- {level}: {message:<70}"
-    
+
     results = list()
     for r in context.data["results"]:
       # Format summary
       results.append(result.format(**r))
-    
+
       # Format log records
       for lr in r["records"]:
-        results.append(record.format("", level=lr.levelname, message=lr.message))
-    
+        results.append(record.format("", level=lr.levelname, message=lr.msg))
+
       # Format exception (if any)
       if r["error"]:
         results.append(error.format("", r["error"]))
-    
+
     report = """
 {header}
 {line}
