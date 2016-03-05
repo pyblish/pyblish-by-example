@@ -11,6 +11,7 @@ import os
 import random
 import datetime
 import pyblish.api
+
 class FlipCoin(pyblish.api.ContextPlugin):
   def process(self, context):
     if random.random() > 0.5:
