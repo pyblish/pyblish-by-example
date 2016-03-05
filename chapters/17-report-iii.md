@@ -45,7 +45,7 @@ for r in context.data["results"]:
 
   # Format log records
   for lr in r["records"]:
-    results.append(record.format("", level=lr.levelname, message=lr.message))
+    results.append(record.format("", level=lr.levelname, message=lr.msg))
 
   # Format exception (if any)
   if r["error"]:
@@ -101,7 +101,7 @@ for r in context.data["results"]:
 
   # Format log records
   for lr in r["records"]:
-    results.append(record.format("", level=lr.levelname, message=lr.message))
+    results.append(record.format("", level=lr.levelname, message=lr.msg))
 
   # Format exception (if any)
   if r["error"]:
