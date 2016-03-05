@@ -17,3 +17,13 @@ The benefits of sticking with CVEI are two-fold.
 2. And under the hood, they allow Pyblish to make assumptions about your plug-ins, such as when to abort.
 
 This language fuels our community, and the assumptions are what fuels the mechanics of Pyblish.
+
+With this in mind, saving plug-ins are files are typically named after what they are.
+
+```yaml
+plugins
+├── collect_my_assets.py
+├── validate_normals.py
+├── extract_alembic.py
+└── integrate_ftrack.py
+```
