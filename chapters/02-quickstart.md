@@ -22,8 +22,7 @@ from maya import cmds
 
 class CollectRig(pyblish.api.ContextPlugin):
   """Discover and collect available rigs into the context"""
-
-  order = pyblish.api.ContextOrder  # Order 0; first
+  order = pyblish.api.CollectorOrder
 
   def process(self, context):
     for node in cmds.ls(sets=True):
@@ -53,7 +52,7 @@ import pyblish.api
 class ValidateRigContents(pyblish.api.InstancePlugin):
   """Ensure rig has the appropriate object sets"""
 
-  order = pyblish.api.ValidatorOrder  # Order 1; after first
+  order = pyblish.api.ValidatorOrder
   families = ["rig"]
 
   def process(self, instance):
@@ -81,9 +80,9 @@ class ExtractRig(pyblish.api.InstancePlugin):
 
   def process(self, instance):
     context = instance.context
-    dirname = os.path.dirname(context.data("currentFile"))
-    name, family = instance.data("name"), instance.data("family")
-    date = pyblish.api.format_filename(context.data("date"))
+    dirname = os.path.dirname(context.data["currentFile"])
+    name, family = instance.data["name"], instance.data["family"]
+    date = pyblish.api.format_filename(context.data["date"])
 
     # Find a temporary directory with support for publishing multiple times.
     tempdir = os.path.join(dirname, "temp", date, family, name)
@@ -117,19 +116,15 @@ import pyblish.api
 
 class IntegrateRig(pyblish.api.InstancePlugin):
   """Copy files to an appropriate location where others may reach it"""
-
   order = pyblish.api.IntegratorOrder
   families = ["rig"]
 
   def process(self, instance):
     assert instance.data("tempdir"), "Can't find rig on disk, aborting.."
 
-    # Access top-level context via instance
-    context = instance.context
-
     self.log.info("Computing output directory..")
+    context = instance.context
     dirname = os.path.dirname(context.data("currentFile"))
-    tempdir = instance.data("tempdir")
     root = os.path.join(dirname, "public")
     
     if not os.path.exists(root):
