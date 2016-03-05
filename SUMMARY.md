@@ -9,6 +9,7 @@
 * [Branching I](chapters/06-branching-i.md)
 * [Branching II](chapters/07-branching-ii.md)
 * [Branching III](chapters/08-branching-iii.md)
+* [Branching IV](chapters/23-branching-iv.md)
 * [Sharing](chapters/09-sharing.md)
 * [Validating I](chapters/10-validating-i.md)
 * [Validating II](chapters/11-validating-ii.md)
