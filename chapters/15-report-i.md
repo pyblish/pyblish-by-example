@@ -42,7 +42,7 @@ With `context` at hand, we can now format the results using the `results` dictio
 results = context.data.get("results")
 header = "{:<10}{:<40} -> {}".format("Success", "Plug-in", "Instance")
 result = "{success:<10}{plugin.__name__:<40} -> {instance}"
-results = "\n".join(template.format(**r) for r in results)
+results = "\n".join(result.format(**r) for r in results)
 report = """
 {header}
 {line}
