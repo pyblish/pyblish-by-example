@@ -89,6 +89,7 @@ Have a look to the left for a table of contents, and below for related topics in
 
 **Intermediate**
 
+- [Install via Git](http://forums.pyblish.com/t/running-from-separate-repos/194/2)
 - [Per task plug-ins](http://forums.pyblish.com/t/task-specific-plugins/127)
 - [Publishing with comments](http://forums.pyblish.com/t/publishing-with-comments/120)
 - [Dependency inject host](http://forums.pyblish.com/t/dependency-inject-host/102)
