@@ -17,7 +17,7 @@ Welcome to the Pyblish by Example tutorial.
 - Developer and Artist communication through the UI
 
 [Pyblish]: http://pyblish.com
-[API]: https://github.com/pyblish/pyblish.api/wiki
+[API]: http://api.pyblish.com
 
 <br>
 <br>
