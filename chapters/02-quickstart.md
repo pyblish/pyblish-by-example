@@ -153,6 +153,18 @@ To run this in your own Maya, copy and run this entire file in your Script Edito
 
 You will be greeted by the Pyblish GUI, something we will talk more about later. For the most part, we will use the scripted version of this, but feel free to keep using the GUI if you'd like. It works in exactly the same way.
 
+### FAQ
+
+Here are the known problems with the above code.
+
+```
+# TypeError: Plug-in <class '__main__.ExtractRig'> is not compatible with this host //
+```
+
+Make sure you have properly run `pyblish_maya.setup()`. This should happen automatically if you have installed the [Maya integration](https://github.com/pyblish/pyblish-maya/wiki/Integration).
+
+
+
 ### Alternative examples
 
 Looking for a full example for your DCC?
