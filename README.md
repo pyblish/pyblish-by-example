@@ -25,9 +25,9 @@ Welcome to the Pyblish by Example tutorial.
 
 ### Introduction
 
-Pyblish is an open source, cross-platform framework designed for test-driven content creation.
+Pyblish is an open source, cross-platform framework for test-driven content creation.
 
-*Pyblish by Example* is a hands-on introduction to Pyblish using short example programs, designed to read from top-to-bottom; like a book. 
+*Pyblish by Example* is a hands-on introduction to Pyblish using short example programs written like a book - to be read from top to bottom.
 
 - [What is Publishing?](https://github.com/pyblish/pyblish/wiki/What-is-publishing)
 
@@ -39,6 +39,20 @@ Pyblish is an open source, cross-platform framework designed for test-driven con
 ### How to use this guide
 
 As you read through this guide, you can choose to use either the "core" library, consisting of a scripting- and command-line interface, or you can supplement your experience with a GUI; which is most like the actual experience of your users.
+
+The scripting interface looks like this.
+
+```python
+import pyblish.util
+pyblish.util.publish()
+```
+
+Whereas the GUI is typically accessed via the File-menu of your application, such as Maya, or opened programatically via your integration, like so.
+
+```python
+import pyblish_maya
+pyblish_maya.show()
+```
 
 
 [pyblish-qml]: http://github.com/pyblish/pyblish-qml
@@ -71,13 +85,7 @@ If you haven't already, go ahead and install Pyblish for [Windows][w], [Linux][l
 [l]: https://github.com/pyblish/pyblish-linux/wiki
 [o]: https://github.com/pyblish/pyblish-osx/wiki
 
-This will install both the scripting, command-line and graphical user interface. You can instead choose to install the bare essentials via `pip`.
-
-```bash
-$ pip install pyblish
-```
-
-This will install just the scripting- and command-line interfaces and occupies 1.17 mb of disk space (1.10 mb of which is vendor packages).
+This will install both the scripting, command-line and graphical user interface.
 
 <br>
 <br>
