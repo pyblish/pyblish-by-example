@@ -15,7 +15,8 @@ class CollectInstances(pyblish.api.ContextPlugin):
   def process(self, context):
     for item in items:
       name, suffix = item.split(".")
-      context.create_instance(name, family=suffix)
+      instance = context.create_instance(name)
+      instance.data["families"] = [suffix]
 
 class PrintPersons(pyblish.api.InstancePlugin):
   order = 20
