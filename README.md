@@ -38,25 +38,12 @@ Pyblish is an open source, cross-platform framework for test-driven content crea
 
 ### How to use this guide
 
-As you read through this guide, you can choose to use either the "core" library, consisting of a scripting- and command-line interface, or you can supplement your experience with a GUI; which is most like the actual experience of your users.
-
-The scripting interface looks like this.
+As you read through this guide, use the scripting API, accessible via `pyblish.util`.
 
 ```python
 import pyblish.util
 pyblish.util.publish()
 ```
-
-Whereas the GUI is typically accessed via the File-menu of your application, such as Maya, or opened programatically via your integration, like so.
-
-```python
-import pyblish_maya
-pyblish_maya.show()
-```
-
-
-[pyblish-qml]: http://github.com/pyblish/pyblish-qml
-[1]: http://forums.pyblish.com/t/learning-pyblish-by-example/108/2
 
 <br>
 <br>
@@ -64,9 +51,11 @@ pyblish_maya.show()
 
 ### Reporting issues
 
-Should you happen to find errors or would like to contribute material to this guide, see the parent GitHub project for more information.
+Should you happen to find errors or would like to contribute material to this guide, you can:
 
-- [Pyblish by Example on GitHub](https://github.com/pyblish/pyblish-by-example)
+1. Click on the `+` button to the right of each paragraph to add a comment
+2. Register on [GitBook](https://www.gitbook.com/book/pyblish/pyblish-by-example) to edit this book directly.
+3. Fork the [GitHub repository](https://github.com/pyblish/pyblish-by-example) and submit a pull-request with your changes.
 
 
 <br>
@@ -75,17 +64,13 @@ Should you happen to find errors or would like to contribute material to this gu
 
 ### Installation
 
-If you haven't already, go ahead and install Pyblish for [Windows][w], [Linux][l] or [OSX][o].
+If you haven't already, go ahead and install Pyblish like this.
 
-- [Windows][w]
-- [Linux][l]
-- [OSX][o]
+```bash
+$ pip install pyblish-base
+```
 
-[w]: https://github.com/pyblish/pyblish-win/wiki/Installation
-[l]: https://github.com/pyblish/pyblish-linux/wiki
-[o]: https://github.com/pyblish/pyblish-osx/wiki
-
-This will install both the scripting, command-line and graphical user interface.
+This will install both the scripting and command-line interfaces. We'll delay looking into a GUI until you are familiar with the basics.
 
 <br>
 <br>
