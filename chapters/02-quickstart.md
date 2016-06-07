@@ -6,9 +6,14 @@ Don't worry too much if it doesn't make sense just now, the rest of the examples
 
 The examples will be written primarily for Autodesk Maya, but should be easily readable and it's concepts applicable to any 3d content creation software. There is a slight simplification involved, for more clarity, but overall this represents a real-world implementation of *a fully featured publishing pipeline with Pyblish*.
 
-### Deep end
+### The Deep End
 
-The example uses the 2 available superclasses in Pyblish - `ContextPlugin` and `InstancePlugin`. The order in which these plug-ins are run, is controlled by an integer attribute called `order`, each integer associated with a conceptual publishing stage shown below.
+The example uses the 2 available superclasses in Pyblish - `ContextPlugin` and `InstancePlugin`. The order in which these plug-ins are run is controlled by an integer attribute called `order`, with 4 default values.
+
+1. Collection
+2. Validation
+3. Extraction
+4. Integration
 
 ![image](https://cloud.githubusercontent.com/assets/2152766/12515092/752725ea-c11e-11e5-923c-ace968721a38.png)
 
