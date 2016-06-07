@@ -1,4 +1,4 @@
-![image](https://cloud.githubusercontent.com/assets/2152766/6998101/5c13946c-dbcd-11e4-968b-b357b7c60a06.png)
+![image](https://cloud.githubusercontent.com/assets/2152766/12489260/51843d38-c067-11e5-93c8-7b96c30ed37a.png)
 
 Welcome to the Pyblish By Example.
 
