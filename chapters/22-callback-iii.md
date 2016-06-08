@@ -1,4 +1,4 @@
-# Callback III
+### Callback III
 
 As a final, practical example of callbacks, consider the following.
 
