@@ -18,4 +18,4 @@ The arguments provided by the signal must match those in your callback. See [her
 
 - [Events][events]
 
-[events]: https://github.com/pyblish/pyblish.api/wiki/Events
+[events]: https://pyblish.gitbooks.io/api/content/pages/Events.html
