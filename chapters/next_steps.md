@@ -1,6 +1,6 @@
 ### Next Steps
 
-So you've completed this guide on getting started with Pyblish, now what? Well, there are a few options.
+So you've completed this guide on getting started with Pyblish, now what? Here are some options.
 
 - Continue learning from [intermediate resources](http://learn.pyblish.com) (see bottom of page).
 - Join the [forums](http://forums.pyblish.com/) and delve into advanced topics, such as [Pyblish Magenta](http://forums.pyblish.com/t/pyblish-magenta/79).
