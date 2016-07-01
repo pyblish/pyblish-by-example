@@ -64,13 +64,9 @@ Should you happen to find errors or would like to contribute material to this gu
 
 ### Installation
 
-If you haven't already, go ahead and install Pyblish like this.
+If you haven't already, go ahead and install Pyblish.
 
-```bash
-$ pip install pyblish-base
-```
-
-This will install both the scripting and command-line interfaces. We'll delay looking into a GUI until you are familiar with the basics.
+- [End-user Installation Guide 1.4](http://forums.pyblish.com/t/pyblish-1-4-released/239/2)
 
 <br>
 <br>
