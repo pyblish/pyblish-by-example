@@ -121,3 +121,4 @@ Have a look to the left for a table of contents, and below for related topics in
 - `2015-12-20 21:56` - Updated image of [Context + Instance](http://forums.pyblish.com/t/learning-pyblish-by-example/108/6).
 - `2016-01-21 17:46` - Transitioned to GitBooks, removed section about custom test and services.
 - `2016-06-07 09:48` - Defer use of GUI from guide.
+- `2016-07-01 14:54` - Link to installation guide on Forum
