@@ -78,7 +78,7 @@ Have a look to the left for a table of contents, and below for related topics in
 
 **Intermediate**
 
-- [Install via Git](http://forums.pyblish.com/t/running-from-separate-repos/194/2)
+- [Multiple families workflow](http://forums.pyblish.com/t/multiple-families-workflow/205)
 - [Per task plug-ins](http://forums.pyblish.com/t/task-specific-plugins/127)
 - [Publishing with comments](http://forums.pyblish.com/t/publishing-with-comments/120)
 - [Dependency inject host](http://forums.pyblish.com/t/dependency-inject-host/102)
@@ -87,6 +87,8 @@ Have a look to the left for a table of contents, and below for related topics in
 - [Search and Customisation](http://forums.pyblish.com/t/pyblish-search-and-customisation)
 - [Good to know about Pyblish](http://forums.pyblish.com/t/good-to-know-about-pyblish)
 - [`hosts` Attribute In-Depth](http://forums.pyblish.com/t/the-use-of-hosts-attribute/78/3)
+- [Registration versus families](http://forums.pyblish.com/t/filtering-collected-instances-based-on-category-family/245/5)
+- [Backwards compatibility](http://forums.pyblish.com/t/backwards-compatibility-and-breaking-changes/246)
 
 
 **Advanced**
