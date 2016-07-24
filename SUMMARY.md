@@ -6,7 +6,6 @@
 * [Files](chapters/03-files.md)
 * [Coordination](chapters/04-coordination.md)
 * [Architecture](chapters/05-architecture.md)
-* [Logging](chapters/23-logging.md)
 * [Branching I](chapters/06-branching-i.md)
 * [Branching II](chapters/07-branching-ii.md)
 * [Branching III](chapters/08-branching-iii.md)
@@ -26,5 +25,6 @@
 * [Callback I](chapters/20-callback-i.md)
 * [Callback II](chapters/21-callback-ii.md)
 * [Callback III](chapters/22-callback-iii.md)
+* [Logging](chapters/23-logging.md)
 * [Next Steps](chapters/next_steps.md)
 
