@@ -6,6 +6,7 @@
 * [Files](chapters/03-files.md)
 * [Coordination](chapters/04-coordination.md)
 * [Architecture](chapters/05-architecture.md)
+* [Logging](chapters/23-logging.md)
 * [Branching I](chapters/06-branching-i.md)
 * [Branching II](chapters/07-branching-ii.md)
 * [Branching III](chapters/08-branching-iii.md)
