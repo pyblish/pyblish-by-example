@@ -23,3 +23,5 @@ pyblish.api.discover()
 ```
 
 The handler can be customised to tailor the format and contents of the messages, like a timestamp and what not.
+
+Read up on standard Python logging and corresponding handlers for more details.
