@@ -94,6 +94,7 @@ Have a look to the left for a table of contents, and below for related topics in
 
 **Advanced**
 
+- [Magenta development thread](http://forums.pyblish.com/t/pyblish-magenta/79)
 - [Developer Guide](http://forums.pyblish.com/t/developer-guide)
 - [Pyblish in 100 lines](https://pyblish.gitbooks.io/developer-guide/content/pyblish_in_100_lines.html)
 
