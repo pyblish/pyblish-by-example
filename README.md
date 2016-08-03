@@ -126,3 +126,4 @@ Have a look to the left for a table of contents, and below for related topics in
 - `2016-01-21 17:46` - Transitioned to GitBooks, removed section about custom test and services.
 - `2016-06-07 09:48` - Defer use of GUI from guide.
 - `2016-07-01 14:54` - Link to installation guide on Forum
+- `2016-08-03 10:40` - Add intermediate and advanced links
