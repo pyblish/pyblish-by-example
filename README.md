@@ -78,6 +78,7 @@ Have a look to the left for a table of contents, and below for related topics in
 
 **Intermediate**
 
+- [Responsibility of Extractors](http://forums.pyblish.com/t/responsibilities-of-extractors/266/9)
 - [Multiple families workflow](http://forums.pyblish.com/t/multiple-families-workflow/205)
 - [Per task plug-ins](http://forums.pyblish.com/t/task-specific-plugins/127)
 - [Publishing with comments](http://forums.pyblish.com/t/publishing-with-comments/120)
