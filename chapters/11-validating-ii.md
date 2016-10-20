@@ -9,7 +9,7 @@ disk = {}
 items = ["JOHN.person", "door.prop"]
 
 class CollectInstances(pyblish.api.ContextPlugin):
-  order = 10
+  order = 0
 
   def process(self, context):
     for item in items:
@@ -17,7 +17,7 @@ class CollectInstances(pyblish.api.ContextPlugin):
       context.create_instance(name, family=suffix)
 
 class ValidateNamingConvention(pyblish.api.InstancePlugin):
-  order = 20
+  order = 1
 
   def process(self, instance):
     name = instance.data["name"]
@@ -25,7 +25,7 @@ class ValidateNamingConvention(pyblish.api.InstancePlugin):
       name, name.title())
 
 class ExtractInstances(pyblish.api.InstancePlugin):
-  order = 30
+  order = 2
 
   def process(self, instance):
     disk[instance.data["name"]] = instance
