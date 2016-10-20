@@ -73,6 +73,7 @@ Write to disk.
 ```python
 import os
 import shutil
+from datetime import datetime
 
 import pyblish.api
 from maya import cmds
@@ -88,7 +89,7 @@ class ExtractRig(pyblish.api.InstancePlugin):
     context = instance.context
     dirname = os.path.dirname(context.data["currentFile"])
     name, family = instance.data["name"], instance.data["family"]
-    date = pyblish.api.format_filename(context.data["date"])
+    date = datetime.now().strftime("%Y%m%dT%H%M%SZ")
 
     # Find a temporary directory with support for publishing multiple times.
     tempdir = os.path.join(dirname, "temp", date, family, name)
