@@ -8,14 +8,14 @@ import pyblish.api
 items = ["john", "door"]
 
 class CollectInstances(pyblish.api.ContextPlugin):
-  order = 10
+  order = 0
 
   def process(self, context):
     for item in items:
       context.create_instance(item)
 
 class PrintInstances(pyblish.api.InstancePlugin):
-  order = 20
+  order = 1
 
   def process(self, instance):
     print("Instance is: %s" % instance)
