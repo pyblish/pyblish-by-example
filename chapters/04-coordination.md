@@ -13,13 +13,13 @@ That's because plug-ins are sorted by the class attribute `order`, and we didn't
 import pyblish.api
 
 class FirstPlugin(pyblish.api.ContextPlugin):
-  order = 10
+  order = 0
 
   def process(self, context):
     print("hello")
 
 class SecondPlugin(pyblish.api.ContextPlugin):
-  order = 20
+  order = 1
 
   def process(self, context):
     print("world")
