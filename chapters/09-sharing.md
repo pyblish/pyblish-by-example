@@ -8,13 +8,13 @@ import datetime
 import pyblish.api
 
 class CollectUserDir(pyblish.api.ContextPlugin):
-  order = 10
+  order = 0
 
   def process(self, context):
     context.data["userDir"] = os.path.expanduser("~")
 
 class WriteTime(pyblish.api.ContextPlugin):
-  order = 20
+  order = 1
 
   def process(self, context):
     user_dir = context.data["userDir"]
