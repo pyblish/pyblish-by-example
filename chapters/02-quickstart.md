@@ -27,6 +27,7 @@ from maya import cmds
 
 class CollectRig(pyblish.api.ContextPlugin):
   """Discover and collect available rigs into the context"""
+
   order = pyblish.api.CollectorOrder
 
   def process(self, context):
@@ -121,6 +122,7 @@ import pyblish.api
 
 class IntegrateRig(pyblish.api.InstancePlugin):
   """Copy files to an appropriate location where others may reach it"""
+
   order = pyblish.api.IntegratorOrder
   families = ["rig"]
 
