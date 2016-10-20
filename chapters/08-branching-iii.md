@@ -10,7 +10,7 @@ import pyblish.api
 items = ["john.person", "door.prop"]
 
 class CollectInstances(pyblish.api.ContextPlugin):
-  order = 10
+  order = 0
 
   def process(self, context):
     for item in items:
@@ -19,14 +19,14 @@ class CollectInstances(pyblish.api.ContextPlugin):
       instance.data["families"] = [suffix]
 
 class PrintPersons(pyblish.api.InstancePlugin):
-  order = 20
+  order = 1
   families = ["person"]
 
   def process(self, instance):
     print("Person is: %s" % instance)
 
 class PrintProps(pyblish.api.InstancePlugin):
-  order = 20
+  order = 1
   families = ["prop"]
 
   def process(self, instance):
