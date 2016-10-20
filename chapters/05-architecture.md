@@ -33,14 +33,14 @@ import datetime
 import pyblish.api
 
 class CollectTime(pyblish.api.ContextPlugin):
-  order = 10
+  order = 0
 
   def process(self, context):
     time = datetime.datetime.now()
     context.data["time"] = time
 
 class PrintTime(pyblish.api.ContextPlugin):
-  order = 20
+  order = 1
 
   def process(self, context):
     time = context.data["time"]
