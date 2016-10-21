@@ -38,7 +38,17 @@ Pyblish is an open source, cross-platform framework for test-driven content crea
 
 ### How to use this guide
 
-As you read through this guide, use the scripting API, accessible via `pyblish.util`.
+Start by confirming to yourself that you are indeed using version 1.4+ of Pyblish.
+
+```python
+>>> import pyblish
+>>> pyblish.__version__
+'1.4.0'
+```
+
+If not, see the top-left corner of this page for a dropdown of your version.
+
+As you read through this guide it is recommended that you use the scripting API, accessible via `pyblish.util`.
 
 ```python
 import pyblish.util
