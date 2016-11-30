@@ -31,6 +31,19 @@ Pyblish is an open source, cross-platform framework for test-driven content crea
 
 - [What is Publishing?](https://github.com/pyblish/pyblish/wiki/What-is-publishing)
 
+<br>
+<br>
+<br>
+
+### Installation
+
+If you haven't already, go ahead and install Pyblish.
+
+```bash
+$ pip install pyblish-base
+```
+
+Any problems, have a look at the [extended installation guide](http://forums.pyblish.com/t/pyblish-1-4-released/239/2).
 
 <br>
 <br>
@@ -43,7 +56,7 @@ Start by confirming to yourself that you are indeed using version 1.4+ of Pyblis
 ```python
 >>> import pyblish
 >>> pyblish.__version__
-'1.4.0'
+'1.4.3'
 ```
 
 If not, see the top-left corner of this page for a dropdown of your version.
@@ -51,8 +64,8 @@ If not, see the top-left corner of this page for a dropdown of your version.
 As you read through this guide it is recommended that you use the scripting API, accessible via `pyblish.util`.
 
 ```python
-import pyblish.util
-pyblish.util.publish()
+from pyblish import util
+util.publish()
 ```
 
 <br>
@@ -67,16 +80,6 @@ Should you happen to find errors or would like to contribute material to this gu
 2. Register on [GitBook](https://www.gitbook.com/book/pyblish/pyblish-by-example) to edit this book directly.
 3. Fork the [GitHub repository](https://github.com/pyblish/pyblish-by-example) and submit a pull-request with your changes.
 
-
-<br>
-<br>
-<br>
-
-### Installation
-
-If you haven't already, go ahead and install Pyblish.
-
-- [End-user Installation Guide 1.4](http://forums.pyblish.com/t/pyblish-1-4-released/239/2)
 
 <br>
 <br>
