@@ -16,7 +16,7 @@ You can think of `Instance` as a *subdivision* of `Context`, each pertaining to 
 
 ![image](https://cloud.githubusercontent.com/assets/2152766/12515132/b6693872-c11e-11e5-911d-43387571751a.png)
 
-In some cases, it makes sense to only look at a small portion of a working file, either for precision or special treatment. For example, if your `Context` is a scene from Start Wars, you might treat Luke different from how you treat The Death Star.
+In some cases, it makes sense to only look at a small portion of a working file, either for precision or special treatment. For example, if your `Context` is a scene from Star Wars, you might treat Luke different from how you treat The Death Star.
 
 In other cases, it makes more sense to look at the world as a whole, such as when identifying Luke midst other assets in your scene.
 
