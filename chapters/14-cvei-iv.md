@@ -12,7 +12,7 @@ class PreCollector(pyblish.api.ContextPlugin):
     context.create_instance("SpecialInstance")
     
 
-class Collectorc(pyblish.api.ContextPlugin):
+class Collector(pyblish.api.ContextPlugin):
   order = pyblish.api.CollectorOrder
   
   def process(self, context):
