@@ -91,7 +91,7 @@ Have a look to the left for a table of contents, and below for related topics in
 
 > **Note:** The below content was written at various versions of Pyblish and may not include current best practices, but all remain forwards compatible with version 1.4.
 
->For example, `.set_data("key", "value")` has been superseded by `.data["key"] = "value"` but will still work with newer plug-ins.
+> For example, `.set_data("key", "value")` has been superseded by `.data["key"] = "value"` but will still work with newer plug-ins.
 
 **Intermediate**
 
