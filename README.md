@@ -103,6 +103,7 @@ Have a look to the left for a table of contents, and below for related topics in
 - [Registration versus families](http://forums.pyblish.com/t/filtering-collected-instances-based-on-category-family/245/5)
 - [Backwards compatibility](http://forums.pyblish.com/t/backwards-compatibility-and-breaking-changes/246)
 
+
 **Advanced**
 
 - [Magenta development thread](http://forums.pyblish.com/t/pyblish-magenta/79)
