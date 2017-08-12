@@ -139,3 +139,4 @@ Have a look to the left for a table of contents, and below for related topics in
 - `2016-06-07 09:48` - Defer use of GUI from guide.
 - `2016-07-01 14:54` - Link to installation guide on Forum
 - `2016-08-03 10:40` - Add intermediate and advanced links
+- `2017-08-12 10:30` - Removed deprecated dependency injection link
