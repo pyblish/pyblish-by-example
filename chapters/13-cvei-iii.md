@@ -18,7 +18,7 @@ The benefits of sticking with CVEI are two-fold.
 
 This language fuels our community, and the assumptions are what fuels the mechanics of Pyblish.
 
-With this in mind, saving plug-ins are files are typically named after what they are.
+With this in mind, saving plug-ins are typically named after what they are.
 
 ```yaml
 plugins
