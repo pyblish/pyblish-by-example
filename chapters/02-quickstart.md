@@ -155,11 +155,27 @@ I'm sure you have lots of questions, but don't worry. This is the part where we 
 
 ### Test it out
 
-To run this in your own Maya, copy and run this entire file in your Script Editor.
+It isn't necessary to run this on your own, but if you want to give it a try, here's what you do.
 
-- [Full Example Source Code](https://gist.github.com/mottosso/93399862c94f0ab4314f)
+1. Install [Pyblish for Maya](https://github.com/pyblish/pyblish-maya#installation)
+2. Copy/paste the full source code [from here](https://gist.github.com/mottosso/93399862c94f0ab4314f) into your Maya script editor
+3. Run it
 
-Open up your Script Editor to inspect its outcome!
+This is what you should expect.
+
+```bash
+...
+import pyblish.util
+pyblish.util.publish()
+pyblish: Registered C:\pythonpath\pyblish_maya\plugins
+Pyblish loaded successfully.
+# pyblish.ExtractRig : Exporting Bruce to C:\...\maya\scenes\temp\20180318T091805Z\rig\Bruce\Bruce.ma # 
+# pyblish.IntegrateRig : Computing output directory.. # 
+# pyblish.IntegrateRig : Copying C:\...\maya\scenes\temp\20180318T091805Z\rig\Bruce to C:\...\maya\scenes\public\v002.. # 
+# pyblish.IntegrateRig : Copied successfully! # 
+```
+
+If not, [let us know](forums.pyblish.com)!
 
 ### Alternative examples
 
