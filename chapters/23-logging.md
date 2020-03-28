@@ -59,3 +59,4 @@ That `%(message)s` is one of the many variables available during formatting, see
 - Autodesk Maya is special, it runs the equivalent of `basicConfig` under-the-hood at startup. Which means that you always see these messages whether you want to or not. You can remove handlers, and edit them despite this.
 - Standalone Python doesn't have any handlers registered, and needs something like the above.
 - See or start a conversation about this [on the forums](https://forums.pyblish.com/t/error-handling-on-plugins/596/3)
+
