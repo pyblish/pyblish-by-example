@@ -175,7 +175,7 @@ Pyblish loaded successfully.
 # pyblish.IntegrateRig : Copied successfully! # 
 ```
 
-If not, [let us know](forums.pyblish.com)!
+If not, [let us know](https://forums.pyblish.com)!
 
 ### Alternative examples
 
