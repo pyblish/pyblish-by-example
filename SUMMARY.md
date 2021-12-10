@@ -26,5 +26,6 @@
 * [Callback II](chapters/21-callback-ii.md)
 * [Callback III](chapters/22-callback-iii.md)
 * [Logging](chapters/23-logging.md)
+* [Filtering](chapters/24-filtering.md)
 * [Next Steps](chapters/next_steps.md)
 
